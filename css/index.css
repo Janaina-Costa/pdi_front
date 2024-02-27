@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sawarabi+Gothic&display=swap');
+
+:root{
+  --var-primary:#ffffff;
+  --var-secondary:#000000;
+  --var-chumbo-1: #4e8391;
+  --var-chumbo-2: #304058;
+  --var-chumbo-3: #3040582f;
+}
+
+body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+  font-family: "Sawarabi Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow: hidden;
+  background: var(--var-chumbo-3);
+  
+}
+
+#container{
+  width: 100%;
+  max-width: 1180px;
+  height: 100vh;
+  max-height:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-image: url('../assets/bg_main.png');
+  image-orientation: from-image ;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
