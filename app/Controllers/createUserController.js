@@ -1,6 +1,5 @@
-import { UserService } from "../service/userService.js"
+import { userService } from "../service/UserService.js"
 
-const userService = new UserService()
 
 const createUserController = ()=>{
 const name = document.querySelector('#name')

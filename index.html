@@ -4,28 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/index.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+  
   <title>GOT</title>
 </head>
 <body>
   <div id="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a>Login</a></li>
+          <li><a href="register.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </header>  
     <main>
-      <header>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a>Login</a></li>
-            <li><a href="register.html">Cadastro</a></li>
-          </ul>
-        </nav>
-      </header>    
-        
-      <section>
-        <p>centro</p>  
+      <section id="wrapper_content">
+        <div id="image_content" >
+          <div id="teste">teste</div>
+        </div>
+        <div id="form_content">
+          register
+          <form id="form">
+            <input type="text" name="name" id="name" placeholder="name">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <input type="text" name="image" id="image" placeholder="https://suaimagem.jpg">
+            <button  id="submit">Cadastrar</button>
+          </form>
+        </div>
+
+        <div id="form_content">
+          update
+          <form >
+            <input type="text" name="name" id="upd_name" placeholder="name">
+            <input type="email" name="email" id="upd_email" placeholder="Email">
+            <input type="password" name="password" id="upd_password" placeholder="Password">
+            <input type="text" name="image" id="upd_image" placeholder="https://suaimagem.jpg">
+            <button  id="upd_submit">Atualizar</button>
+          </form>
+        </div>
+
+        <div id="form_content">
+          login
+          <form >            
+            <input type="email" name="email" id="lg_email" placeholder="Email">
+            <input type="password" name="password" id="lg_password" placeholder="Password">            
+            <button  id="lg_submit">Entra</button>
+            <button  id="out_submit">Sair</button>
+          </form>
+        </div>
       </section>
         
     </main>
     
   </div>
+  
+  <script src="app/Controllers/" type="module"></script>
+  <script type="module" src="app/Controllers/"></script> 
+  <script type="module" src="app/Controllers/updateUserController.js"></script>
+ 
 </body>
 </html>
