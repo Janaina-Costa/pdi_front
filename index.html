@@ -4,31 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Inter:wght@400;600;700&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
   
   <title>GOT</title>
 </head>
 <body>
   <div id="container">
-   <div id="wrapper">
-    <div id="logo_place">
-      <img src="./assets/gotLogo.png" width="340px">
-      <p>For fans</p>
-    
-    </div>
+    <div id="wrapper">
+        <div id="main_image">
+          <img src="./assets/danearystrasp.png" alt="imagem da personagem Danearys Targerian - mãe dos dragões">
+        </div>
+        <div id="logo_place">
+          <img src="./assets/gotLogo.png" alt="Imagem com o nome da série - Game Of Thrones">
+          <p>For fans</p>    
+        </div>
      <main>
-      <header>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a>Login</a></li>
-            <li><a href="register.html">Cadastro</a></li>
-          </ul>
-        </nav>
-      </header>  
+        <header>
+            <nav>
+            <ul>
+              <li><a href="./pages/characters.html">Explore os personagens</a></li>
+              <li><a>Login</a></li>
+              <li><a href="register.html">Cadastre-se</a></li>
+            </ul>
+          </nav>
+        </header>  
+
       <section id="wrapper_content">
-        
+
+        <div id="box_link">
+          <a href="./pages/characters.html" id="link_characters">
+            <h1>As Crônicas de Gelo e Fogo</h1>
+            <p>
+              Fãs de Game of Thrones, sabem que o inverno está sempre à espreita. Explore personagens e suas curiosidades enquanto aguardamos o destino do Trono de Ferro. Valar Morghulis!
+            </p>
+          </a>
+          
+        </div>
+
+        <div id="box_quote">          
+          
+          <blockquote class="quote">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quia cum dolor harum quam voluptatibus expedita, quas amet ipsa, perferendis soluta...
+            </blockquote>
+           
+            <p class="author">Tyrion Lannister</p>
+          </div>
       </section>
         
     </main>
