@@ -4,8 +4,11 @@
   min-height: 100vh;
   display:flex;
   flex-direction: column;
-  background: rgb(48,64,88);
-  background: linear-gradient(180deg, rgba(24, 38, 59, 0.834) 0%, rgba(0,0,0,1) 44%, rgba(6,10,37,0.5873317988668556) 100%);
+  background-color: rgb(24, 31, 41);  
+  background-image: url("../assets/barraneve.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-blend-mode:luminosity;
  
 }
 
@@ -78,9 +81,9 @@
 #main_form{
   position: relative;
   display: flex;
+  height: 100vh;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
   padding: 4rem;
   z-index: 9999;
 
