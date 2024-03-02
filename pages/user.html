@@ -3,40 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/index.css">
+ 
+  <link rel="stylesheet" href="../globalStyles.css">
+  <link rel="stylesheet" href="../css/userprofile.css">
+
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
   
   <title>GOT</title>
 </head>
 <body>
-  <div id="container">
-    <header>
+  <div id="container_access">
+    <header id="pg_navbar">
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a>Login</a></li>
+          <li><a href="../index.html"><img src="../assets/corvo.png" class="corvo_three_eyes" alt="Imagem do corvo de três olhos" width="150px"></a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">Personagens</a></li>
           <li><a href="register.html">Cadastro</a></li>
         </ul>
       </nav>
     </header>  
-    <main>
-      <section id="wrapper_content">
-     
-        <div id="form_content">
-          update
-          <form >
-            <input type="text" name="name" id="upd_name" placeholder="name">
-            <input type="email" name="email" id="upd_email" placeholder="Email">
-            <input type="password" name="password" id="upd_password" placeholder="Password">
-            <input type="text" name="image" id="upd_image" placeholder="https://suaimagem.jpg">
-            <button  id="upd_submit">Atualizar</button>
+    <main id="main_form">
+      
+      <section id="wrapper_form">
+        <figure>
+          <img src="https://www.creativefabrica.com/wp-content/uploads/2023/01/24/Cute-And-Adorable-Cartoon-Black-Girl-58792598-1.png" alt="">
+        </figure>
+          <form >            
+            <div id="box_form">
+              <input type="text" name="name" id="upd_name" placeholder="name">
+              <input type="email" name="email" id="upd_email" placeholder="Email">
+              <input type="password" name="password" id="upd_password" placeholder="Password">
+              <input type="text" name="image" id="upd_image" placeholder="https://suaimagem.jpg">
+              <button  id="upd_submit">Atualizar</button>
+            </div>        
           </form>
-        </div>
-
-      </section>
+        </section>
         
-    </main>
+      </main>
+     <div id="img_bottom_profile">
+      <img src="../assets/barraneve.png" alt="imagem de chão com neve">
+     </div>
     
   </div>
   
@@ -46,3 +53,8 @@
  
 </body>
 </html>
+
+
+
+
+            

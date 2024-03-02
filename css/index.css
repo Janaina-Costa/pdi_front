@@ -13,8 +13,10 @@
 
 #main_image{
   position: absolute;
-  right: -186px;
+  /* right: -186px; */
   top: -38px;
+  transition: 0.3s;
+  animation: 3s forwards show_img ease-in;
 }
 
 #wrapper{
@@ -135,3 +137,37 @@
  #wrapper_content #box_quote .author{
   margin-top: .5rem;  
  }
+
+ @media screen and (max-width: 1085px){
+  #wrapper_content{  
+    max-width: 80%;
+  }
+  #main_content{
+   align-items: center;
+  }
+  #container #main_image{
+    animation-duration: 5s ;
+    animation-name: hide_img;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes hide_img {
+  from {
+    right: -186px;
+  }
+
+  to {
+    right: -1586px;
+  }
+}
+
+@keyframes show_img {
+  from {
+    right: -900px;
+  }
+
+  to {
+    right: -186px;
+  }
+}
