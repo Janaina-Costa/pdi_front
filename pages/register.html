@@ -3,39 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="../css/access.css">
+  <link rel="stylesheet" href="../globalStyles.css">
+
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
   
   <title>GOT</title>
 </head>
 <body>
-  <div id="container">
-    <header>
+  <div id="container_access">
+    <header id="pg_navbar">
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a>Login</a></li>
+          <li><a href="../index.html"><img src="../assets/corvo.png" class="corvo_three_eyes" alt="Imagem do corvo de três olhos" width="150px"></a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">Personagens</a></li>
           <li><a href="register.html">Cadastro</a></li>
         </ul>
       </nav>
     </header>  
-    <main>
-      <section id="wrapper_content">
-       
-        <div id="form_content">
-          register
-          <form id="form">
-            <input type="text" name="name" id="name" placeholder="name">
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="password" name="password" id="password" placeholder="Password">
-            <input type="text" name="image" id="image" placeholder="https://suaimagem.jpg">
-            <button  id="submit">Cadastrar</button>
+    <main id="main_form">
+      
+      <section id="wrapper_form">
+          <form >            
+            <div id="box_form">
+              <input type="text" name="name" id="name" placeholder="Digite seu nome">
+              <input type="email" name="email" id="email" placeholder="Digite seu email">
+              <input type="password" name="password" id="password" placeholder="Digite sua aenha">
+              <input type="text" name="image" id="image" placeholder="Cole a url da sua imagem aqui: ex. https://suaimagem.jpg">  
+              <button  id="lg_submit">Cadastrar</button>
+              <a href="../pages/login.html"> Já possui cadastro? <span class="link">Entre aqui</span></a>
+            </div>        
           </form>
-        </div>
-      </section>
+        </section>
         
-    </main>
+      </main>
+     <div id="img_bottom_register">
+      <img src="../assets/barraneve.png" alt="imagem de chão com neve">
+     </div>
     
   </div>
   
