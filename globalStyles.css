@@ -19,3 +19,28 @@ body{
   background: var(--var-chumbo-3);
   overflow: hidden;
 }
+
+
+
+  /* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--var-chumbo-1) transparent;
+
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--var-chumbo-2);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #304058;
+  border-radius: 20px;
+  border: 3px solid var(--var-chumbo-1);
+
+}
