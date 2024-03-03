@@ -81,7 +81,7 @@
   display: none;
   display: flex;
 }
-.user_logout{
+.nav_btn{
   cursor: pointer;
   color: var(--var-primary-light);
   font-weight: 600;

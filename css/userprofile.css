@@ -175,3 +175,12 @@ background-color: #ffffff1c;
 #wrapper_form form a span{
   text-decoration: underline;
 }
+
+@media  screen and (max-width: 768px){
+  #wrapper_form{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+}

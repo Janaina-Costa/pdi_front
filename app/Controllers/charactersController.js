@@ -46,8 +46,8 @@ const createModalContent = (id)=>{
 
     img.src = character.imageUrl
     img.alt = character.fullName
-    img.style.width = '16rem'
-    img.style.height = '16rem'
+    img.style.width = '14rem'
+    img.style.height = '14rem'
     img.style.borderRadius = '100%'
     img.style.margin = 'auto'
     img.style.display = 'block'

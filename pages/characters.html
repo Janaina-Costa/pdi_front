@@ -19,17 +19,30 @@
         </div>
     </div>
       <!-- modal -->
-
     <header id="pg_navbar">
       <nav>
         <ul>
-          <li><a href="../index.html"><img src="../assets/corvo.png" class="corvo_three_eyes" alt="Imagem do corvo de três olhos" width="150px"></a></li>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../pages/characters.html">Personagens</a></li>
-          <li><a href="../pages/register.html">Cadastro</a></li>
+          <li class="userprofile"><a href="../pages/user.html">Olá <span class="username"></span></a></li>
+          <li ><button class="user_logout nav_btn"> Sair </button></li>
+          <div class="list">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
         </ul>
       </nav>
     </header>  
+
+    <!-- menu mobile -->
+    
+        <ul class="menu_mobile">
+          <button class="close_menu nav_btn">X</button>
+          <li class="userprofile"><a href="../pages/user.html"><span class="username"></span></a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li ><button class="user_logout nav_btn"> Sair </button></li>
+        </ul>
+      
 
     <main id="main_character">
       <section id="wrapper_character">      
@@ -38,13 +51,12 @@
         </ul>
       
       </section>
-        
-           
     </main>
 
 </div>
 
-<script type="module" src="../scriptPages/characters.js"></script>
+
+<script type="module" src="../scriptPages/userNavbarData.js"></script>
 <script type="module" src="../app/Controllers/charactersController.js"></script>
  
 </body>
