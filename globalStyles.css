@@ -65,6 +65,7 @@ body{
   justify-content: space-evenly;
   width: 24px;
   height: 32px;
+  display: none;
 }
 #pg_navbar ul .list:hover{
   transform: scale(1.1);
@@ -77,22 +78,24 @@ body{
 }
 
 .menu_mobile{
-  /* display: none; */
   position: absolute;
   width: 12rem;
   height: 14rem;
-  right: 15%;
-  display: flex;
+  right: 50%;
+  margin-right: -114px;
+  top: 56px;
   flex-direction: column;
   padding:  0 1rem;
   align-items: center;
   justify-content: space-evenly;
   background-color: #151922ea;
-  z-index: 11;
+  z-index: 9999;
+
   box-shadow: 0px 3px 5px 0px rgba(217,216,216,0.57);
--webkit-box-shadow: 0px 3px 5px 0px rgba(217,216,216,0.57);
--moz-box-shadow: 0px 3px 5px 0px rgba(217,216,216,0.57);
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(217,216,216,0.57);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(217,216,216,0.57);
   transition: 0.3s;
+  display: none;
 }
 
 .user_logout, .nav_btn{
@@ -125,5 +128,15 @@ body{
   background-color: #304058;
   border-radius: 20px;
   border: 3px solid var(--var-chumbo-1);
+
+}
+
+@media screen and (max-width: 768px){
+  #pg_navbar nav ul li{
+    display: none;
+  }
+  #pg_navbar ul .list{
+    display: flex;
+  }
 
 }

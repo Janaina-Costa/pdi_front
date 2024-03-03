@@ -44,15 +44,6 @@
   padding: 0;
 }
 
-@media screen and (max-width: 768px){
-  #pg_navbar ul li{
-    display: none;
-  }
-  #pg_navbar ul li:nth-child(1){
-    display: block;
-  }
-  
-}
 #pg_navbar li{
   list-style: none;
   margin: 0 1rem;
@@ -79,15 +70,16 @@
   align-items: center;
   flex-direction: column;
   padding: 4rem;
-  z-index: 9999;
+ 
 
 }
 
 #wrapper_form{
+  position: relative;
   width:32rem;
   max-width: 100%;
   padding: 2rem;
-  z-index: 9999;
+ 
   display: flex;
   justify-content: space-evenly;
 

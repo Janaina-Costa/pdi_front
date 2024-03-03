@@ -90,13 +90,5 @@
 }
 
 
-@media screen and (max-width: 768px){
-  #pg_navbar ul li{
-    display: none;
-  }
-  #pg_navbar ul li:nth-child(1){
-    display: block;
-  }
-  
-}
+
 

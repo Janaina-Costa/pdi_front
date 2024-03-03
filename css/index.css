@@ -69,6 +69,7 @@
 }
 #navbar ul{
   display: flex;
+  justify-content:left !important;
   gap: 2rem;
 }
 #navbar ul li{
@@ -161,6 +162,10 @@
     animation-name: hide_img;
     animation-fill-mode: forwards;
   }
+  #navbar ul{
+    justify-content: center !important;
+  }
+  
 }
 
 @keyframes hide_img {
