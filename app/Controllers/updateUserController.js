@@ -14,8 +14,7 @@ const updateUserController = ()=>{
   btn.addEventListener('click',async(e)=>{
     e.preventDefault()
     const dataForm = getDataForm()
-    console.log(dataForm.name);
-    await updateUser(dataForm.name, dataForm.email, dataForm.password, dataForm.image) 
+      await updateUser(dataForm.name, dataForm.email, dataForm.password, dataForm.image) 
 
   })
 
@@ -33,8 +32,7 @@ const updateUserController = ()=>{
 
 const formInitialData = async()=>{
   let user
-  console.log('caii');
- 
+  
   if(USER_DATA){
     api.defaults.headers.Authorization = `Bearer ${USER_DATA.data.token}`   
     const userId = USER_DATA.data.userLogged.id
