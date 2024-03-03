@@ -33,20 +33,21 @@ const updateUserController = ()=>{
 
 const formInitialData = async()=>{
   let user
-  
-  if(USER_DATA){
-
-    api.defaults.headers.Authorization = `Bearer ${USER_DATA.data.token}`   
-    const userId = USER_DATA.data.userLogged.id
-    user = await getUser(userId)
-    console.log(user);
+  if(!USER_DATA.data){
+    return
   }
+    
+  api.defaults.headers.Authorization = `Bearer ${USER_DATA.data.token}`   
+  const userId = USER_DATA.data.userLogged.id
+  user = await getUser(userId)
+  console.log(user);
   name.value = user.name
   email.value = user.email
   password.value = user.password
   image.value = user.image
   userImage.src=user.image
   userImage.alt= user.name
+  
 }
 
 const getUser = async(id)=>{    

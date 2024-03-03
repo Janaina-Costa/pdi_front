@@ -14,16 +14,15 @@ const showUserData = ()=>{
 
   if(!data){
     username.forEach(user=>user.style.display = 'none')
-    userprofile.style.display = 'none'
-    
+    userprofile.style.display = 'none'  
   }
-    
+  
   if(userLogin && userReg){
     userLogin.style.display = data ? 'none' : 'block'
     userReg.style.display = data ? 'none' : 'block'
   }
   logoutBtn.forEach(btn=>btn.style.display = data ? 'block' : 'none')
-  username.forEach(user=>user.innerHTML = data.data.userLogged.name)
+  username.forEach(user=>user.innerHTML = data?.data.userLogged.name)
 }
 
 
