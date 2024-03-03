@@ -5,6 +5,7 @@ const username = document.querySelectorAll('.username')
 const userLogin = document.querySelector('.user_login')
 const userReg = document.querySelector('.user_register')
 const logoutBtn = document.querySelectorAll('.user_logout')
+const character = document.querySelectorAll('.character')
 
 
 const showUserData = ()=>{
@@ -25,27 +26,59 @@ const showUserData = ()=>{
   username.forEach(user=>user.innerHTML = data.data.userLogged.name)
 }
 
-const character = document.querySelector('.character')
 
 const protectedRouter = ()=>{
-  if(character){
-  
-    character.addEventListener('click', ()=>{
-      const data = JSON.parse(localStorage.getItem('user_data'))
-      const homepage = window.location.href === './index.html'
-    
-      if(data !== null){
-        if(homepage){
-          window.location.href = 'pages/characters.html'
+  if(character){  
+    character.forEach(char=>{
+      char.addEventListener('click', ()=>{
+        const data = JSON.parse(localStorage.getItem('user_data'))
+        const homepage = window.location.href === './index.html'
+      
+        if(data !== null){
+          if(homepage){
+            window.location.href = 'pages/characters.html'
+          }else{
+            window.location.href = '../pages/characters.html'
+          }
         }else{
-          window.location.href = '../pages/characters.html'
+          alert('Você precisa estar logado para acessar essa página')
+          window.location.href = '/pages/login.html'
+      
         }
-      }else{
-        window.location.href = '/pages/login.html'
-    
-      }
+      })
     })
   }
+}
+
+const menu_mobile = document.querySelectorAll('.menu_mobile')
+
+const showMenuMobile = ()=>{
+
+  menu_mobile.forEach(menu=>{
+    if(menu.style.display === 'none'){
+      menu.style.display = 'flex'
+    }else{
+      menu.style.display = 'none'
+    }
+  })
+
+}
+
+
+const switchMenuMobile = ()=>{
+  
+  const clickMenu = document.querySelectorAll('.list')
+
+  clickMenu.forEach(menu =>{
+    menu.addEventListener('click', showMenuMobile, false)
+  })
+
+  window.addEventListener('resize', ()=>{
+    if(window.innerWidth > 768){
+      menu_mobile.forEach(menu=>menu.style.display = 'none')
+    }
+    
+  })
 }
 
 
@@ -57,6 +90,9 @@ const logout = ()=>{
   }))
 }
 
+switchMenuMobile()
 protectedRouter()
 showUserData()
 logout()
+
+
