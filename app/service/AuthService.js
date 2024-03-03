@@ -3,7 +3,7 @@ import { userService } from "./UserService.js"
 
 export const USER_DATA = JSON.parse(localStorage.getItem('user_data')) || {}
 
-class AuthController{
+class AuthService{
 
   async signIn (email, password){
     const data = await api.post('/login', {email,password})
@@ -12,9 +12,9 @@ class AuthController{
     }
     localStorage.setItem('user_data',JSON.stringify(data))
 
-    api.defaults.headers.Authorization = `Bearer ${data.token}`
+    api.defaults.headers.Authorization = `Bearer ${data.data.token}`
     userService.getUserById(data.data.userLogged.id)  
-    window.location.href = '/login.html'
+    window.location.href = '/'
     return data.data
 
   }
@@ -29,4 +29,4 @@ class AuthController{
     
   }
 }
-export const authController = new AuthController()
+export const authService = new AuthService()

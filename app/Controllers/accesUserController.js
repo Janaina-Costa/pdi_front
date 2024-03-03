@@ -1,15 +1,15 @@
-import { api } from "../api/api.js"
-import { USER_DATA, authController } from "../service/AuthService.js"
+import { authService } from "../service/AuthService.js"
 
 const email = document.querySelector('#lg_email')
 const password = document.querySelector('#lg_password')
 const btn = document.querySelector('#lg_submit')
 
-const loginUserController = ()=>{
-    btn.addEventListener('click', (e)=>{
+const loginUserController =  ()=>{
+    btn.addEventListener('click',async (e)=>{
       e.preventDefault()
       const dataForm = getDataForm()
-      signIn(dataForm.email, dataForm.password)
+      console.log(dataForm);
+     await signIn(dataForm.email, dataForm.password)
     
       email.value= ''
       password.value = ''
@@ -17,9 +17,6 @@ const loginUserController = ()=>{
     })
   }
 
-  
-
-//dados do formulario
 const getDataForm = ()=>{
   return {
     email: email.value,
@@ -27,10 +24,9 @@ const getDataForm = ()=>{
   }
 }
 
-
 const signIn = async(email,password)=>{
   try{
-    await authController.signIn(email,password)
+    await authService.signIn(email,password)
    
   }catch(err){
     console.log(err);
@@ -38,14 +34,7 @@ const signIn = async(email,password)=>{
   }
 }
 
-const logout = ()=>{
-  const btn = document.querySelector('#out_submit')
-  btn.addEventListener('click',(e)=>{
-    e.preventDefault()
-    authController.signOut(alert('Deslogado com sucesso'))
-  })
-}
 
 
 loginUserController()
-logout()
+

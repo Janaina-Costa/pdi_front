@@ -6,7 +6,6 @@ const author = document.querySelector('.author')
 
 const quotes = async()=>{
     const data = await getQuotesData()
-    console.log(data)
     if(!data){
       sentence.textContent = 'Loading...'
       author.textContent = ''

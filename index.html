@@ -28,10 +28,10 @@
             <ul>
               <li><a href="../index.html"><img src="../assets/corvo.png" alt="" width="120px"></a></li>
               <li><a href="./pages/characters.html">Personagens</a></li>
-              <li><a href="./pages/login.html">Login</a></li>
-              <li><a href="./pages/register.html">Cadastre-se</a></li>
-              <li class="userlogout"><button> Sair </button></li>
-              <li class="userprofile"><a href="./pages/user.html">Olá <span class="username"></span>! acesse aqui seu perfil</a></li>
+              <li class="user_login"><a href="./pages/login.html">Login</a></li>
+              <li class="user_register"><a href="./pages/register.html">Cadastre-se</a></li>
+              <li class="userprofile"><a href="./pages/user.html">Olá <span class="username"></span></a></li>
+              <li ><button class="user_logout"> Sair </button></li>
             </ul>
           </nav>
         </header>  
@@ -62,7 +62,10 @@
    </div>
     
   </div>
+  <script type="module" src="./scriptPages/user.js"></script>
+  <script type="module" src="app/Controllers/accesUserController.js"></script>
   <script type="module" src="app/Controllers/quotesController.js"></script>
+  <script type="module" src="./scriptPages/characters.js"></script>
  
 </body>
 </html>

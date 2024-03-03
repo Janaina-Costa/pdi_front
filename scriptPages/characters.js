@@ -1,8 +1,7 @@
-const modal = document.querySelector('.modal')
-const style = window.getComputedStyle(modal)
 
 const switchModal = ()=>{  
-  const styleModal = style.display
+  const modal = document.querySelector('.modal')
+  const styleModal = modal.style.display
 
   if(styleModal === 'none'){
     modal.style.display = 'block'
