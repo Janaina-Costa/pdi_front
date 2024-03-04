@@ -10,11 +10,10 @@ const character = document.querySelectorAll('.character')
 
 const showUserData = ()=>{
   const data = JSON.parse(localStorage.getItem('user_data'))
-  console.log(data);
 
   if(!data){
     username.forEach(user=>user.style.display = 'none')
-    userprofile.style.display = 'none'  
+   userprofile? userprofile.style.display = 'none': null  
   }
   
   if(userLogin && userReg){

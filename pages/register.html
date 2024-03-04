@@ -15,29 +15,40 @@
     <header id="pg_navbar">
       <nav>
         <ul>
-          <li><a href="../index.html"><img src="../assets/corvo.png" class="corvo_three_eyes" alt="Imagem do corvo de três olhos" width="150px"></a></li>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../pages/login.html">Login</a></li>
+          <div class="list">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
         </ul>
       </nav>
     </header>  
+
+     <!-- menu mobile -->    
+  <ul class="menu_mobile">    
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../pages/login.html">Login</a></li>
+  </ul>
+
     <main id="main_form">
       
       <section id="wrapper_form">
           <form >            
             <div id="box_form">
-              <input type="text" name="name" id="upd_name" class="get_fields" placeholder="Digite seu nome">
+              <input type="text" name="name" id="crt_name" class="get_fields" placeholder="Digite seu nome">
               <p class="default_error default_error_name" style="display: none;"></p> 
               
-              <input type="email" name="email" id="upd_upd_email" class="get_fields" placeholder="Digite seu email">
+              <input type="email" name="email" id="crt_email" class="get_fields" placeholder="Digite seu email">
               <p class="default_error default_error_mail" style="display: none;"></p>
 
-              <input type="password" name="password" id="upd_password" class="get_fields" placeholder="Digite sua senha">
+              <input type="password" name="password" id="crt_password" class="get_fields" placeholder="Digite sua senha">
               <p class="default_error default_error_pass" style="display: none;"></p> 
 
-              <input type="text" name="image" id="upd_image" placeholder="Cole a url da sua imagem aqui: ex. https://suaimagem.jpg">  
+              <input type="text" name="image" id="crt_image" placeholder="Cole a url da sua imagem aqui: ex. https://suaimagem.jpg">  
 
-              <button  id="upd_submit">Cadastrar</button>
+              <button  id="crt_submit">Cadastrar</button>
               <a href="../pages/login.html"> Já possui cadastro? <span class="link">Entre aqui</span></a>
             </div>        
           </form>
@@ -48,7 +59,8 @@
   </div>
   
   
-  <script type="module" src="../app/Controllers/updateUserController.js"></script>
+  <script type="module" src="../app/Controllers/createUserController.js"></script>
+  <script type="module" src="../scriptPages/userNavbarData.js"></script>
   <script type="module" src="../scriptPages/validateForms.js"></script>
  
 </body>

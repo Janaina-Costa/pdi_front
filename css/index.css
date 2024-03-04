@@ -13,7 +13,6 @@
 
 #main_image{
   position: absolute;
-  /* right: -186px; */
   top: -38px;
   transition: 0.3s;
   animation: 3s forwards show_img ease-in;
@@ -165,8 +164,8 @@
   #navbar ul{
     justify-content: center !important;
   }
-  
 }
+
 
 @keyframes hide_img {
   from {

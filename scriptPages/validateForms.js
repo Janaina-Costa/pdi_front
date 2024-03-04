@@ -79,7 +79,7 @@ const validateNameField = () => {
       if(fieldName === 'name' && e.target.value !== ''){
         const min = 3
     
-        if(e.target.value.length < min || e.target.value.length > max){
+        if(e.target.value.length < min ){
           defaultErrorName.forEach(error=>{
             error.innerHTML = `Nome deve ter no mínimo ${min} caracteres.`
             error.style.display = 'block'

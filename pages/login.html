@@ -16,12 +16,23 @@
     <header id="pg_navbar">
       <nav>
         <ul>
-          <li><a href="../index.html"><img src="../assets/corvo.png" class="corvo_three_eyes" alt="Imagem do corvo de três olhos" width="150px"></a></li>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../pages/register.html">Cadastro</a></li>
+          <div class="list">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
         </ul>
       </nav>
     </header>  
+
+     <!-- menu mobile -->    
+  <ul class="menu_mobile">    
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../pages/register.html">Cadastro</a></li>
+  </ul>
+
     <main id="main_form">
       
       <section id="wrapper_form">
@@ -44,6 +55,7 @@
   
  
   <script type="module" src="../app/Controllers/accesUserController.js"></script>
+  <script type="module" src="../scriptPages/userNavbarData.js"></script>
   <script type="module" src="../scriptPages/validateForms.js"></script>
  
 </body>

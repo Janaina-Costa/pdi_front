@@ -2,17 +2,19 @@ import { userService } from "../service/UserService.js"
 
 
 const createUserController = ()=>{
-const name = document.querySelector('#name')
-const email = document.querySelector('#email')
-const password = document.querySelector('#password')
-const image = document.querySelector('#image')
+const name = document.querySelector('#crt_name')
+const email = document.querySelector('#crt_email')
+const password = document.querySelector('#crt_password')
+const image = document.querySelector('#crt_image')
 
-const btn = document.querySelector('#submit')
+const btn = document.querySelector('#crt_submit')
   const submitForm = async()=>{
     btn.addEventListener('click', (e)=>{
       e.preventDefault()
       const dataForm = getDataForm()    
       createUser(dataForm.name, dataForm.email, dataForm.password)
+      alert('Usuário criado com sucesso')
+      window.location.href = '/'
     })
   }
   
