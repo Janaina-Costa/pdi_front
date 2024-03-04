@@ -1,68 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./globalStyles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Inter:wght@400;600;700&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
-  
-  <title>GOT</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Inter:wght@400;600;700&family=Sawarabi+Gothic&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="module" src="./scriptPages/audio.js"></script>
+
+  <title>GOT- For Fãs</title>
 </head>
+
 <body>
   <div id="container">
     <div id="wrapper">
-        <div id="main_image">
-          <img src="./assets/danearystrasp.png" alt="imagem da personagem Danearys Targerian - mãe dos dragões">
-        </div>
-        <div id="logo_place">
-          <img src="./assets/gotLogo.png" alt="Imagem com o nome da série - Game Of Thrones">
-          <p>For fans</p>    
-        </div>
-     <main id="main_content">
+      <div id="main_image">
+        <img src="./assets/danearystrasp.png" alt="imagem da personagem Danearys Targerian - mãe dos dragões">
+      </div>
+      <div id="logo_place">
+        <img src="./assets/gotLogo.png" alt="Imagem com o nome da série - Game Of Thrones">
+        <p>For Fãs</p>
+      </div>
+      <main id="main_content">
         <header id="navbar">
-            <nav>
+          <nav>
             <ul>
               <li><button class="character nav_btn" href="">Personagens</button></li>
               <li class="user_login"><a href="./pages/login.html">Login</a></li>
               <li class="user_register"><a href="./pages/register.html">Cadastre-se</a></li>
               <li class="userprofile"><a href="./pages/user.html">Olá <span class="username"></span></a></li>
-              <li ><button class="user_logout nav_btn"> Sair </button></li>
+              <li><button class="user_logout nav_btn"> Sair </button></li>
             </ul>
           </nav>
-        </header>  
+        </header>
 
-      <section id="wrapper_content">
+        <section id="wrapper_content">
 
-        <div id="box_link">
-          <a href="./pages/characters.html" id="link_characters">
-            <h1>As Crônicas de Gelo e Fogo</h1>
-            <p>
-              Fãs de Game of Thrones, sabem que o inverno está sempre à espreita. Explore personagens e suas curiosidades enquanto aguardamos o destino do Trono de Ferro. <span>Valar Morghulis!</span>
-            </p>
-          </a>
-          
-        </div>
+          <div id="box_link">
+            <a href="./pages/characters.html" id="link_characters">
+              <h1>As Crônicas de Gelo e Fogo</h1>
+              <p>
+                Fãs de Game of Thrones, sabem que o inverno está sempre à espreita. Explore personagens e suas
+                curiosidades enquanto aguardamos o destino do Trono de Ferro. <span>Valar Morghulis!</span>
+              </p>
+            </a>
 
-        <div id="box_quote">          
-          
-          <blockquote class="sentence">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quia cum dolor harum quam voluptatibus expedita, quas amet ipsa, perferendis soluta...
+          </div>
+
+          <div id="box_quote">
+
+            <blockquote class="sentence">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quia cum dolor harum quam voluptatibus
+              expedita, quas amet ipsa, perferendis soluta...
             </blockquote>
-           
+
             <p class="author">Tyrion Lannister</p>
           </div>
-      </section>
-        
-    </main>
-   </div>
-    
+        </section>
+      </main>
+    </div>
+
   </div>
-  <script type="module" src="./scriptPages/userNavbarData.js"></script>  
+  <script type="module" src="./scriptPages/userNavbarData.js"></script>
   <script type="module" src="app/Controllers/quotesController.js"></script>
 
 </body>
+
 </html>

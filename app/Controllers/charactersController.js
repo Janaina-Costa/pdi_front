@@ -1,31 +1,32 @@
 const baseUrl = 'https://thronesapi.com/api/v2/Characters'
 
 let id
-const createCharacterList = async ()=>{
+const createCharacterList = async () => {
   const ul = document.querySelector('.scroll_container')
-    
+
   const data = await getAllCharacters()
-  data.map(character=>{
+  data.map(character => {
     let li = document.createElement('li')
     let img = document.createElement('img')
 
     li.classList.add('scroll_img')
     li.classList.add('select_character')
-    
+
     img.style.width = '5rem'
     img.style.height = '5rem'
+    img.style.objectFit='cover'
     img.style.borderRadius = '100%'
-    
+
     img.setAttribute('id', character.id)
     img.src = character.imageUrl
     img.alt = character.fullName
-    
+
 
     li.appendChild(img)
     ul.appendChild(li)
 
 
-    li.addEventListener('click', ()=>{
+    li.addEventListener('click', () => {
       id = character.id
       switchModal()
       createModalContent(id)
@@ -34,11 +35,11 @@ const createCharacterList = async ()=>{
 }
 
 
-const createModalContent = (id)=>{
+const createModalContent = (id) => {
   const modal = document.querySelector('.modal')
   const modalContent = document.querySelector('.content_modal')
   modalContent.innerHTML = ''
-  getCharacterById(id).then(character=>{
+  getCharacterById(id).then(character => {
     let img = document.createElement('img')
     let h2 = document.createElement('h2')
     let p = document.createElement('p')
@@ -49,6 +50,7 @@ const createModalContent = (id)=>{
     img.style.width = '14rem'
     img.style.height = '14rem'
     img.style.borderRadius = '100%'
+    img.style.objectFit='cover'
     img.style.margin = 'auto'
     img.style.display = 'block'
 
@@ -69,7 +71,7 @@ const createModalContent = (id)=>{
     button.style.borderRadius = '5px'
     button.style.cursor = 'pointer'
 
-    button.addEventListener('click', ()=>{
+    button.addEventListener('click', () => {
       switchModal()
     })
 
@@ -81,33 +83,33 @@ const createModalContent = (id)=>{
 }
 
 
-const switchModal = ()=>{  
+const switchModal = () => {
   const modal = document.querySelector('.modal')
   const styleModal = modal.style.display
-  
-  if(styleModal === 'none'){
+
+  if (styleModal === 'none') {
     modal.style.display = 'block'
-  }else{
-    modal.style.display ='none'
+  } else {
+    modal.style.display = 'none'
   }
 }
-  
-window.onclick = (event)=>{
+
+window.onclick = (event) => {
   const modal = document.querySelector('.modal')
-  if(event.target == modal){
+  if (event.target == modal) {
     switchModal()
   }
 }
-  
 
-const getAllCharacters =async()=>{
+
+const getAllCharacters = async () => {
   const response = await fetch(baseUrl)
   const data = await response.json()
   return data
 }
 
 
-const getCharacterById = async(id)=>{
+const getCharacterById = async (id) => {
   const response = await fetch(`${baseUrl}/${id}`)
   const data = await response.json()
   return data

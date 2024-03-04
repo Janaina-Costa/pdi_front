@@ -10,17 +10,16 @@ const btn = document.getElementById('upd_submit')
 
 const userImage = document.getElementById('user_image')
 
-const updateUserController = ()=>{
+const updateUserController = () => {
 
-  btn.addEventListener('click',async(e)=>{
+  btn.addEventListener('click', async (e) => {
     e.preventDefault()
     const dataForm = getDataForm()
-      await updateUser(dataForm.name, dataForm.email, dataForm.password, dataForm.image) 
-      window.location.reload()
+    await updateUser(dataForm.name, dataForm.email, dataForm.password, dataForm.image)
+    window.location.reload()
   })
 
-  //dados do formulario
-  const getDataForm = ()=>{    
+  const getDataForm = () => {
     return {
       name: name.value,
       email: email.value,
@@ -30,32 +29,31 @@ const updateUserController = ()=>{
   }
 }
 
-
-const formInitialData = async()=>{
+const formInitialData = async () => {
   let user
-  if(!USER_DATA.data){
+  if (!USER_DATA.data) {
     return
   }
-    
-  api.defaults.headers.Authorization = `Bearer ${USER_DATA.data.token}`   
+
+  api.defaults.headers.Authorization = `Bearer ${USER_DATA.data.token}`
   const userId = USER_DATA.data.userLogged.id
   user = await getUser(userId)
-  
+
   name.value = user.name
   email.value = user.email
   password.value = user.password
   image.value = user.image
-  userImage.src=user.image
-  userImage.alt= user.name
-  
+  userImage.src = user.image
+  userImage.alt = user.name
+
 }
 
-const getUser = async(id)=>{    
- return await userService.getUserById(id)
+const getUser = async (id) => {
+  return await userService.getUserById(id)
 }
 
-const updateUser = async(name, email, password, image)=>{
-  return  await userService.updateUser(USER_DATA.data.userLogged.id, name, email, password, image)
+const updateUser = async (name, email, password, image) => {
+  return await userService.updateUser(USER_DATA.data.userLogged.id, name, email, password, image)
 }
 
 

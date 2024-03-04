@@ -95,6 +95,7 @@ background-color: #ffffff1c;
 }
 
 #wrapper_form figure img{
+  object-fit: cover;
   width: 8rem;
   height: 8rem;
   max-width: 100%;

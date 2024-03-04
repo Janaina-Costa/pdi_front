@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/access.css">
   <link rel="stylesheet" href="../globalStyles.css">
 
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
-  
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   <title>GOT</title>
 </head>
+
 <body>
   <div id="container_access">
     <header id="pg_navbar">
@@ -24,44 +26,46 @@
           </div>
         </ul>
       </nav>
-    </header>  
+    </header>
 
-     <!-- menu mobile -->    
-  <ul class="menu_mobile">    
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../pages/login.html">Login</a></li>
-  </ul>
+    <!-- menu mobile -->
+    <ul class="menu_mobile">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/login.html">Login</a></li>
+    </ul>
 
     <main id="main_form">
-      
+
       <section id="wrapper_form">
-          <form >            
-            <div id="box_form">
-              <input type="text" name="name" id="crt_name" class="get_fields" placeholder="Digite seu nome">
-              <p class="default_error default_error_name" style="display: none;"></p> 
-              
-              <input type="email" name="email" id="crt_email" class="get_fields" placeholder="Digite seu email">
-              <p class="default_error default_error_mail" style="display: none;"></p>
+        <form>
+          <div id="box_form">
+            <input type="text" name="name" id="crt_name" class="get_fields" placeholder="Digite seu nome">
+            <p class="default_error default_error_name" style="display: none;"></p>
 
-              <input type="password" name="password" id="crt_password" class="get_fields" placeholder="Digite sua senha">
-              <p class="default_error default_error_pass" style="display: none;"></p> 
+            <input type="email" name="email" id="crt_email" class="get_fields" placeholder="Digite seu email">
+            <p class="default_error default_error_mail" style="display: none;"></p>
 
-              <input type="text" name="image" id="crt_image" placeholder="Cole a url da sua imagem aqui: ex. https://suaimagem.jpg">  
+            <input type="password" name="password" id="crt_password" class="get_fields" placeholder="Digite sua senha">
+            <p class="default_error default_error_pass" style="display: none;"></p>
 
-              <button  id="crt_submit">Cadastrar</button>
-              <a href="../pages/login.html"> Já possui cadastro? <span class="link">Entre aqui</span></a>
-            </div>        
-          </form>
-        </section>
-        
-      </main>
-    
+            <input type="text" name="image" id="crt_image"
+              placeholder="Cole a url da sua imagem aqui: ex. https://suaimagem.jpg">
+
+            <button id="crt_submit">Cadastrar</button>
+            <a href="../pages/login.html"> Já possui cadastro? <span class="link">Entre aqui</span></a>
+          </div>
+        </form>
+      </section>
+
+    </main>
+
   </div>
-  
-  
+
+
   <script type="module" src="../app/Controllers/createUserController.js"></script>
   <script type="module" src="../scriptPages/userNavbarData.js"></script>
   <script type="module" src="../scriptPages/validateForms.js"></script>
- 
+
 </body>
+
 </html>

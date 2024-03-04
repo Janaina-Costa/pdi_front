@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+
   <link rel="stylesheet" href="../globalStyles.css">
   <link rel="stylesheet" href="../css/userprofile.css">
 
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
-  
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   <title>GOT</title>
 </head>
+
 <body>
-  <div id="container_access" >
+  <div id="container_access">
     <header id="pg_navbar">
       <nav>
         <ul>
-    
+
           <li><a href="../index.html">Home</a></li>
-          <li><button class="character nav_btn" href="../pages/characters.html">Personagens</button></li>          
+          <li><button class="character nav_btn" href="../pages/characters.html">Personagens</button></li>
           <li class="userprofile"><a href="#">Olá <span class="username"></span></a></li>
-          <li ><button class="user_logout nav_btn"> Sair </button></li>
+          <li><button class="user_logout nav_btn"> Sair </button></li>
 
           <div class="list">
             <div class="line"></div>
@@ -29,45 +31,41 @@
           </div>
         </ul>
       </nav>
-    </header>  
+    </header>
 
-  <!-- menu mobile -->  
-  
-  <ul class="menu_mobile">
-    <li class="userprofile"><a href="../pages/user.html"><span class="username"></span></a></li>
-    <li><a href="../index.html">Home</a></li>
-    <li><button class="character nav_btn" href="../pages/characters.html">Personagens</button></li>     
-    <li ><button class="user_logout nav_btn"> Sair </button></li>
-  </ul>
+    <!-- menu mobile -->
+
+    <ul class="menu_mobile">
+      <li class="userprofile"><a href="../pages/user.html"><span class="username"></span></a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><button class="character nav_btn" href="../pages/characters.html">Personagens</button></li>
+      <li><button class="user_logout nav_btn"> Sair </button></li>
+    </ul>
 
     <main id="main_form">
-      
+
       <section id="wrapper_form">
         <figure>
           <img id="user_image" src="" alt="">
         </figure>
-          <form >            
-            <div id="box_form">
-              <input type="text" name="name" id="upd_name" placeholder="name">
-              <input type="email" name="email" id="upd_email" placeholder="Email">
-              <input type="password" name="password" id="upd_password" placeholder="Password">
-              <input type="text" name="image" id="upd_image" placeholder="https://suaimagem.jpg">
-              <button  id="upd_submit">Atualizar</button>
-            </div>        
-          </form>
-        </section>
-        
-      </main>    
+        <form>
+          <div id="box_form">
+            <input type="text" name="name" id="upd_name" placeholder="name">
+            <input type="email" name="email" id="upd_email" placeholder="Email">
+            <input type="password" name="password" id="upd_password" placeholder="Password">
+            <input type="text" name="image" id="upd_image" placeholder="https://suaimagem.jpg">
+            <button id="upd_submit">Atualizar</button>
+          </div>
+        </form>
+      </section>
+
+    </main>
   </div>
-  
-  
+
+
   <script type="module" src="../app/Controllers/updateUserController.js"></script>
   <script type="module" src="../scriptPages/userNavbarData.js"></script>
- 
+
 </body>
+
 </html>
-
-
-
-
-            

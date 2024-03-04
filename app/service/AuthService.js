@@ -16,7 +16,6 @@ class AuthService{
     userService.getUserById(data.data.userLogged.id)  
     window.location.href = '/'
     return data.data
-
   }
   
    signOut(message){    
@@ -25,8 +24,6 @@ class AuthService{
       api.defaults.headers.Authorization = undefined
       return message
     }
-      
-    
   }
 }
 export const authService = new AuthService()
