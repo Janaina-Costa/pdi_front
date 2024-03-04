@@ -26,10 +26,17 @@
       <section id="wrapper_form">
           <form >            
             <div id="box_form">
-              <input type="text" name="name" id="upd_name" placeholder="Digite seu nome">
-              <input type="email" name="email" id="upd_upd_email" placeholder="Digite seu email">
-              <input type="password" name="password" id="upd_password" placeholder="Digite sua aenha">
+              <input type="text" name="name" id="upd_name" class="get_fields" placeholder="Digite seu nome">
+              <p class="default_error default_error_name" style="display: none;"></p> 
+              
+              <input type="email" name="email" id="upd_upd_email" class="get_fields" placeholder="Digite seu email">
+              <p class="default_error default_error_mail" style="display: none;"></p>
+
+              <input type="password" name="password" id="upd_password" class="get_fields" placeholder="Digite sua senha">
+              <p class="default_error default_error_pass" style="display: none;"></p> 
+
               <input type="text" name="image" id="upd_image" placeholder="Cole a url da sua imagem aqui: ex. https://suaimagem.jpg">  
+
               <button  id="upd_submit">Cadastrar</button>
               <a href="../pages/login.html"> Já possui cadastro? <span class="link">Entre aqui</span></a>
             </div>        
@@ -42,6 +49,7 @@
   
   
   <script type="module" src="../app/Controllers/updateUserController.js"></script>
+  <script type="module" src="../scriptPages/validateForms.js"></script>
  
 </body>
 </html>

@@ -27,8 +27,11 @@
       <section id="wrapper_form">
           <form >            
             <div id="box_form">
-              <input type="email" name="email" id="lg_email" placeholder="Email">
-              <input type="password" name="password" id="lg_password" placeholder="Senha">    
+              <input type="email" name="email" id="lg_email" class="get_fields" placeholder="Email"
+              >
+              <p class="default_error default_error_mail" style="display: none;"></p>
+              <input type="password" name="password" id="lg_password" class="get_fields" placeholder="Senha">
+              <p class="default_error  default_error_pass" style="display: none;"></p>    
               <button  id="lg_submit">Entrar</button>
               <a href="../pages/register.html"> Não possui cadastro? <span class="link">Entre aqui</span></a>
             </div>        
@@ -41,6 +44,7 @@
   
  
   <script type="module" src="../app/Controllers/accesUserController.js"></script>
+  <script type="module" src="../scriptPages/validateForms.js"></script>
  
 </body>
 </html>
