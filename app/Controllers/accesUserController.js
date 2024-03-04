@@ -8,8 +8,7 @@ const loginUserController =  ()=>{
     btn.addEventListener('click',async (e)=>{
       e.preventDefault()
       const dataForm = getDataForm()
-      console.log(dataForm);
-     await signIn(dataForm.email, dataForm.password)
+      await signIn(dataForm.email, dataForm.password)
     
       email.value= ''
       password.value = ''

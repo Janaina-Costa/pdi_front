@@ -40,7 +40,7 @@ const formInitialData = async()=>{
   api.defaults.headers.Authorization = `Bearer ${USER_DATA.data.token}`   
   const userId = USER_DATA.data.userLogged.id
   user = await getUser(userId)
-  console.log(user);
+  
   name.value = user.name
   email.value = user.email
   password.value = user.password

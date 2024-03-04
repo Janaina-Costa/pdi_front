@@ -22,7 +22,7 @@ const validateEmailField = () => {
        if(fieldName === 'email' && e.target.value.length > 0){
         const isValidEmail = emailValidate(e.target.value)
         if(!isValidEmail){
-          console.log('aqui');
+         
           defaultErrorMail.forEach(error=>{
             error.innerHTML = 'Email inválido'
             error.style.display = 'block'
