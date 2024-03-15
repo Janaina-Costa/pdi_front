@@ -9,11 +9,12 @@ const character = document.querySelectorAll('.character')
 
 
 const showUserData = () => {
-  const data = JSON.parse(localStorage.getItem('user_data'))
+  const data = JSON.parse(localStorage.getItem('user_data') ) || {}
 
   if (!data) {
     username.forEach(user => user.style.display = 'none')
     userprofile ? userprofile.style.display = 'none' : null
+    return 
   }
 
   if (userLogin && userReg) {

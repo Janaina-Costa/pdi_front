@@ -1,4 +1,14 @@
+import { authService } from "../service/AuthService.js"
+
 const baseUrl = 'https://thronesapi.com/api/v2/Characters'
+
+const isAuthenticated = authService.isAuthenticated()
+window.onload=()=>{
+
+  if(!isAuthenticated){
+    window.location.href = '/'
+  }
+}
 
 let id
 const createCharacterList = async () => {
@@ -16,6 +26,7 @@ const createCharacterList = async () => {
     img.style.height = '5rem'
     img.style.objectFit='cover'
     img.style.borderRadius = '100%'
+    img.loading = 'lazy'
 
     img.setAttribute('id', character.id)
     img.src = character.imageUrl
@@ -36,7 +47,7 @@ const createCharacterList = async () => {
 
 
 const createModalContent = (id) => {
-  const modal = document.querySelector('.modal')
+ 
   const modalContent = document.querySelector('.content_modal')
   modalContent.innerHTML = ''
   getCharacterById(id).then(character => {
@@ -103,6 +114,7 @@ window.onclick = (event) => {
 
 
 const getAllCharacters = async () => {
+  
   const response = await fetch(baseUrl)
   const data = await response.json()
   return data
